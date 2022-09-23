@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <VHGE_CommandToggleGas_Label>Toggle gas flow</VHGE_CommandToggleGas_Label>
+  <VHGE_CommandToggleGas_Desc>Designate gas flow to be toggle on or off. A colonist will come soon to flick the switch.</VHGE_CommandToggleGas_Desc>
+</LanguageData>

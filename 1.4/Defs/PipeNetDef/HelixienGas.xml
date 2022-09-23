@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  <PipeSystem.PipeNetDef>
+    <defName>VHGE_HelixienNet</defName>
+    <resource>
+      <name>Chemfuel</name>
+      <unit>l</unit>
+      <color>(0.22, 0.57, 0.2)</color>
+      <onlyShowStored>True</onlyShowStored>
+      <offTexPath>UI/Overlays/GasOff</offTexPath>
+    </resource>
+    <pipeDefs>
+      <li>VHGE_HelixienPipe</li>
+      <li>VHGE_SubterraneanHelixienPipe</li>
+    </pipeDefs>
+    <designator>
+      <deconstructIconPath>UI/Commands/GasPipeDeconstruct_MenuIcon</deconstructIconPath>
+      <designationCategoryDef>Power</designationCategoryDef>
+    </designator>
+    <overlayOptions>
+      <transmitterAtlas>Things/Special/Fluid/GasTransmitterAtlas</transmitterAtlas>
+    </overlayOptions>
+  </PipeSystem.PipeNetDef>
+</Defs>
