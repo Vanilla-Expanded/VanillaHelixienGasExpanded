@@ -39,12 +39,12 @@
     <comps>
       <li Class="PipeSystem.CompProperties_ResourceStorage">
         <pipeNet>VHGE_HelixienNet</pipeNet>
-        <storageCapacity>1000</storageCapacity>
+        <storageCapacity>3000</storageCapacity>
         <barSize>(1.3, 0.25)</barSize>
         <margin>0.1</margin>
       </li>
       <li Class="PipeSystem.CompProperties_ExplosiveContent">
-        <explosiveMaxRadius>12</explosiveMaxRadius>
+        <explosiveMaxRadius>10</explosiveMaxRadius>
         <!-- Vanilla options below -->
         <explosiveDamageType>Flame</explosiveDamageType>
         <destroyThingOnExplosionSize>2</destroyThingOnExplosionSize>
