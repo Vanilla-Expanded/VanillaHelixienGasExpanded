@@ -25,6 +25,7 @@
     <modExtensions>
       <li Class="VFECore.ThingDefExtension">
         <deepColor>(0.24, 0.4, 0.2)</deepColor>
+        <allowDeepDrill>false</allowDeepDrill>
       </li>
     </modExtensions>
     <!-- Never appear -->
