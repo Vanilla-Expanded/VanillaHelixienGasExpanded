@@ -38,7 +38,7 @@
         <alwaysLinkToPipes>true</alwaysLinkToPipes>
       </li>
       <li Class="CompProperties_Flickable">
-        <commandTexture>Things/Special/Fluid/VPE_OverlayBase</commandTexture>
+        <commandTexture>Things/Special/Fluid/VHGE_OverlayBase</commandTexture>
         <commandLabelKey>VHGE_CommandToggleGas_Label</commandLabelKey>
         <commandDescKey>VHGE_CommandToggleGas_Desc</commandDescKey>
       </li>
