@@ -18,4 +18,10 @@
       <li>VHGE_GasPoweredStove</li>
     </value>
   </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/WorkGiverDef[defName = "DoBillsMakeWeapons"]/fixedBillGiverDefs</xpath>
+    <value>
+      <li>VHGE_GasPoweredSmithy</li>
+    </value>
+  </Operation>
 </Patch>
