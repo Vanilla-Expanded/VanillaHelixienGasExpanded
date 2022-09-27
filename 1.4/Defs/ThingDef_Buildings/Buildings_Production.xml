@@ -2,7 +2,7 @@
 <Defs>
   <ThingDef ParentName="BuildingBase">
     <defName>VHGE_GasPoweredCrematorium</defName>
-    <label>gas powered crematorium</label>
+    <label>gas-powered crematorium</label>
     <description>A huge stone crematorium which vaporizes corpses with extremely high temperatures. Operates on helixien gas.</description>
     <thingClass>PipeSystem.Building_ResourceWorkTable_HeatPush</thingClass>
     <graphicData>
@@ -88,7 +88,7 @@
   <ThingDef ParentName="BenchBase">
     <defName>VHGE_GasPoweredSmelter</defName>
     <description>Extracts usable metal from slag chunks and other mixed metal items. Operates on helixien gas.</description>
-    <label>gas powered smelter</label>
+    <label>gas-powered smelter</label>
     <thingClass>PipeSystem.Building_ResourceWorkTable_HeatPush</thingClass>
     <graphicData>
       <texPath>Things/Building/GasMachines/GasSmelter</texPath>
@@ -172,7 +172,7 @@
 
   <ThingDef ParentName="BenchBase">
     <defName>VHGE_GasPoweredStove</defName>
-    <label>gas powered stove</label>
+    <label>gas-powered stove</label>
     <description>A gas-powered stove with an attached countertop for preparing meals.</description>
     <thingClass>PipeSystem.Building_ResourceWorkTable_HeatPush</thingClass>
     <graphicData>
@@ -248,7 +248,7 @@
 
   <ThingDef ParentName="BenchBase">
     <defName>VHGE_GasPoweredSmithy</defName>
-    <label>gas powered smithy</label>
+    <label>gas-powered smithy</label>
     <description>A gas-powered station for smithing non-mechanical weapons and tools.</description>
     <thingClass>PipeSystem.Building_ResourceWorkTable_HeatPush</thingClass>
     <graphicData>
@@ -322,6 +322,83 @@
       <li Class="RecipeInheritance.ThingDefExtension">
         <inheritRecipesFrom>
           <li>ElectricSmithy</li>
+        </inheritRecipesFrom>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BenchBase">
+    <defName>VHGE_GasPoweredRefinery</defName>
+    <label>gas-powered refinery</label>
+    <description>Refines biological matter like wood or plant matter into chemfuel. Needs to be connected to the helixien gas network.</description>
+    <thingClass>PipeSystem.Building_ResourceWorkTable_HeatPush</thingClass>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>2000</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <minifiedDef />
+    <thingCategories Inherit="false" />
+    <size>(3,2)</size>
+    <costList>
+      <Steel>150</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="PipeSystem.CompProperties_ResourceTrader">
+        <pipeNet>VHGE_HelixienNet</pipeNet>
+        <consumptionPerTick>2</consumptionPerTick>
+        <idleConsumptionPerTick>0</idleConsumptionPerTick>
+      </li>
+      <li Class="CompProperties_Flickable">
+        <commandTexture>Things/Special/Fluid/VHGE_OverlayBase</commandTexture>
+        <commandLabelKey>VHGE_CommandToggleGas_Label</commandLabelKey>
+        <commandDescKey>VHGE_CommandToggleGas_Desc</commandDescKey>
+      </li>
+      <li Class="CompProperties_Breakdownable" />
+    </comps>
+    <castEdgeShadows>false</castEdgeShadows>
+    <staticSunShadowHeight>0</staticSunShadowHeight>
+    <graphicData>
+      <texPath>Things/Building/GasMachines/GasPoweredRefinery</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(3,2)</drawSize>
+      <shadowData>
+        <volume>(2.22, 0.8, 0.62)</volume>
+        <offset>(0, 0, -0.13)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.3,0.1,2.4,1.8)</rect>
+      </damageData>
+    </graphicData>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+    </building>
+    <fillPercent>0.5</fillPercent>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>Production</designationCategory>
+    <surfaceType>Item</surfaceType>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>BiofuelRefining</li>
+      <li>VHGE_GasExtraction</li>
+    </researchPrerequisites>
+    <modExtensions>
+      <li Class="RecipeInheritance.ThingDefExtension">
+        <inheritRecipesFrom>
+          <li>BiofuelRefinery</li>
         </inheritRecipesFrom>
       </li>
     </modExtensions>
