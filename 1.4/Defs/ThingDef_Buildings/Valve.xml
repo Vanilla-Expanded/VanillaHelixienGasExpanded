@@ -2,7 +2,7 @@
 <Defs>
   <ThingDef ParentName="BuildingBase">
     <defName>VHGE_GasPipeValve</defName>
-    <label>gas pipe valve</label>
+    <label>gas valve</label>
     <description>Switches gas flow on/off.</description>
     <thingClass>PipeSystem.Building_PipeValve</thingClass>
     <category>Building</category>
