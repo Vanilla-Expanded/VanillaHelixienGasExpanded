@@ -20,5 +20,11 @@
     <overlayOptions>
       <transmitterAtlas>Things/Special/Fluid/GasTransmitterAtlas</transmitterAtlas>
     </overlayOptions>
+    <linkToRefuelables>
+      <li>
+        <thing>VHGE_Helixien</thing>
+        <ratio>1</ratio>
+      </li>
+    </linkToRefuelables>
   </PipeSystem.PipeNetDef>
 </Defs>
