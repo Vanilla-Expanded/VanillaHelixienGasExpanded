@@ -3,7 +3,7 @@
   <PipeSystem.PipeNetDef>
     <defName>VHGE_HelixienNet</defName>
     <resource>
-      <name>Chemfuel</name>
+      <name>Helixien gas</name>
       <unit>l</unit>
       <color>(0.22, 0.57, 0.2)</color>
       <onlyShowStored>True</onlyShowStored>
