@@ -17,7 +17,7 @@
     <costList>
       <Steel>50</Steel>
     </costList>
-    <comps>
+    <comps Inherit='False'>
       <li Class="CompProperties_Glower">
         <overlightRadius>7.0</overlightRadius>
         <glowRadius>14</glowRadius>
