@@ -2,7 +2,7 @@
 <Defs>
   <ThingDef ParentName="BuildingBase">
     <defName>VHGE_HelixienGenerator</defName>
-    <label>helixien gas powered generator</label>
+    <label>gas powered generator</label>
     <description>Produces power by consuming helixien gas. Must be connected to a gas pipe network.</description>
     <thingClass>Building</thingClass>
     <graphicData>
@@ -82,7 +82,7 @@
 
   <ThingDef ParentName="BuildingBase" MayRequire="VanillaExpanded.VFEPower">
     <defName>VHGE_IndustrialHelixienGenerator</defName>
-    <label>industrial helixien gas powered generator</label>
+    <label>industrial gas powered generator</label>
     <description>Produces a large amount of power by consuming helixien gas. Must be connected to a gas pipe network.</description>
     <thingClass>Building</thingClass>
     <graphicData>
