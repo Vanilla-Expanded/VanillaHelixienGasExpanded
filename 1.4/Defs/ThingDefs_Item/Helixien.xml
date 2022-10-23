@@ -21,7 +21,7 @@
     <deepCommonality>1</deepCommonality>
     <deepCountPerPortion>30</deepCountPerPortion>
     <deepLumpSizeRange>40~80</deepLumpSizeRange>
-    <deepCountPerCell>300</deepCountPerCell>
+    <deepCountPerCell>2100</deepCountPerCell>
     <modExtensions>
       <li Class="VFECore.ThingDefExtension">
         <deepColor>(0.24, 0.4, 0.2)</deepColor>
