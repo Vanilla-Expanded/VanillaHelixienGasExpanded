@@ -48,6 +48,7 @@
     <researchPrerequisites>
       <li>VHGE_GasExtraction</li>
     </researchPrerequisites>
+    <designationCategory>VCHE_PipeNetworks</designationCategory>
   </ThingDef>
 
   <ThingDef ParentName="StandingLampBase">
@@ -78,6 +79,7 @@
     <researchPrerequisites Inherit='False'>
       <li>VHGE_GasExtraction</li>
     </researchPrerequisites>
+    <designationCategory>VCHE_PipeNetworks</designationCategory>
   </ThingDef>
 
   <ThingDef ParentName="StandingLampBase">
@@ -121,6 +123,7 @@
     <researchPrerequisites Inherit='False'>
       <li>VHGE_GasExtraction</li>
     </researchPrerequisites>
+    <designationCategory>VCHE_PipeNetworks</designationCategory>
   </ThingDef>
 
   <ThingDef ParentName="StandingLampBase">
@@ -156,5 +159,6 @@
       <li>VHGE_GasExtraction</li>
     </researchPrerequisites>
     <uiIconOffset>(0, 0.2)</uiIconOffset>
+    <designationCategory>VCHE_PipeNetworks</designationCategory>
   </ThingDef>
 </Defs>

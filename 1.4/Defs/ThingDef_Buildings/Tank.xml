@@ -55,7 +55,7 @@
       </li>
     </comps>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-    <designationCategory>Power</designationCategory>
+    <designationCategory>VCHE_PipeNetworks</designationCategory>
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
     <constructEffect>ConstructMetal</constructEffect>
     <researchPrerequisites>

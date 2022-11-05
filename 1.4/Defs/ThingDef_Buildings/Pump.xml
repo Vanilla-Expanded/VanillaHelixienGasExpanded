@@ -59,7 +59,7 @@
       </li> -->
     </comps>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <designationCategory>Power</designationCategory>
+    <designationCategory>VCHE_PipeNetworks</designationCategory>
     <designationHotKey>Misc3</designationHotKey>
     <constructEffect>ConstructMetal</constructEffect>
     <researchPrerequisites>

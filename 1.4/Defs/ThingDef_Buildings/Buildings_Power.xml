@@ -70,7 +70,7 @@
     </comps>
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-    <designationCategory>Power</designationCategory>
+    <designationCategory>VCHE_PipeNetworks</designationCategory>
     <designationHotKey>Misc4</designationHotKey>
     <constructEffect>ConstructMetal</constructEffect>
     <researchPrerequisites>
@@ -149,7 +149,7 @@
       </li>
     </comps>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-    <designationCategory>Power</designationCategory>
+    <designationCategory>VCHE_PipeNetworks</designationCategory>
     <designationHotKey>Misc4</designationHotKey>
     <constructEffect>ConstructMetal</constructEffect>
     <researchPrerequisites>

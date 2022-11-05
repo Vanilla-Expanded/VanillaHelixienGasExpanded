@@ -62,7 +62,7 @@
       </li>
       <li Class="CompProperties_Breakdownable" />
     </comps>
-    <designationCategory>Temperature</designationCategory>
+    <designationCategory>VCHE_PipeNetworks</designationCategory>
     <researchPrerequisites>
       <li>VHGE_GasExtraction</li>
     </researchPrerequisites>
@@ -130,7 +130,7 @@
       </li>
       <li Class="CompProperties_Breakdownable" />
     </comps>
-    <designationCategory>Temperature</designationCategory>
+    <designationCategory>VCHE_PipeNetworks</designationCategory>
     <designationHotKey>Misc2</designationHotKey>
     <researchPrerequisites>
       <li>VHGE_GasExtraction</li>

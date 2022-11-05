@@ -34,7 +34,7 @@
       <Beauty>-10</Beauty>
     </statBases>
     <size>(3,2)</size>
-    <designationCategory>Production</designationCategory>
+    <designationCategory>VCHE_PipeNetworks</designationCategory>
     <fillPercent>1</fillPercent>
     <passability>Impassable</passability>
     <hasInteractionCell>True</hasInteractionCell>
@@ -117,7 +117,7 @@
       <Flammability>1.0</Flammability>
     </statBases>
     <size>(3,1)</size>
-    <designationCategory>Production</designationCategory>
+    <designationCategory>VCHE_PipeNetworks</designationCategory>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
     <hasInteractionCell>True</hasInteractionCell>
@@ -202,7 +202,7 @@
       <Flammability>1.0</Flammability>
     </statBases>
     <size>(3,1)</size>
-    <designationCategory>Production</designationCategory>
+    <designationCategory>VCHE_PipeNetworks</designationCategory>
     <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
     <hasInteractionCell>True</hasInteractionCell>
@@ -281,7 +281,7 @@
       <Cleanliness>-3</Cleanliness>
     </statBases>
     <size>(3,1)</size>
-    <designationCategory>Production</designationCategory>
+    <designationCategory>VCHE_PipeNetworks</designationCategory>
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>
     <hasInteractionCell>True</hasInteractionCell>
@@ -385,7 +385,7 @@
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <hasInteractionCell>true</hasInteractionCell>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-    <designationCategory>Production</designationCategory>
+    <designationCategory>VCHE_PipeNetworks</designationCategory>
     <surfaceType>Item</surfaceType>
     <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
     <placeWorkers>

@@ -15,7 +15,7 @@
     </pipeDefs>
     <designator>
       <deconstructIconPath>UI/Commands/GasPipeDeconstruct_MenuIcon</deconstructIconPath>
-      <designationCategoryDef>Power</designationCategoryDef>
+      <designationCategoryDef>VCHE_PipeNetworks</designationCategoryDef>
     </designator>
     <overlayOptions>
       <transmitterAtlas>Things/Special/Fluid/GasTransmitterAtlas</transmitterAtlas>
