@@ -57,18 +57,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HarmonyInit.cs" />
-    <Compile Include="HelixienGasHandler.cs" />
-    <Compile Include="Placeworker_Pump.cs" />
-    <Compile Include="Prefix_DeepResourceGrid_RenderMouseAttachments.cs" />
-    <Compile Include="Prefix_DeepResourceGrid_SetAt.cs" />
+    <Compile Include="Harmony\HarmonyInit.cs" />
+    <Compile Include="MapComponent\HelixienGasHandler.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="Placeworker\Placeworker_Pump.cs" />
+    <Compile Include="Harmony\DeepResourceGrid_RenderMouseAttachments.cs" />
+    <Compile Include="Harmony\DeepResourceGrid_SetAt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TDefOf.cs" />
+    <Compile Include="ThingDefOf.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Lib.Harmony" ExcludeAssets="Runtime">
       <Version>2.2.2</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

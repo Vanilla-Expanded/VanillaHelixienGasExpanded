@@ -4,10 +4,10 @@ using Verse;
 namespace VHelixienGasE
 {
     [DefOf]
-    public static class TDefOf
+    public static class ThingDefOf
     {
         public static ThingDef VHGE_Helixien;
 
-        static TDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(TDefOf));
+        static ThingDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(ThingDefOf));
     }
 }
