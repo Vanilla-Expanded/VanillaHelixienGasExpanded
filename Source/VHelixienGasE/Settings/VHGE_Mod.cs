@@ -20,5 +20,11 @@ namespace VHelixienGasE
         public override void DoSettingsWindowContents(Rect inRect) => settings.DoSettingsWindowContents(inRect);
 
         public override string SettingsCategory() => "VHGE_Name".Translate();
+
+        public override void WriteSettings()
+        {
+            base.WriteSettings();
+            settings.WriteSettings();
+        }
     }
 }
