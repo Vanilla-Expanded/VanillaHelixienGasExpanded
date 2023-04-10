@@ -18,7 +18,7 @@ namespace VHelixienGasE
 
         public static void Postfix(WidgetRow row, bool worldView)
         {
-            if (!worldView)
+            if (!worldView && VHGE_Mod.settings.enableDeepDeposits)
             {
                 row.ToggleableIcon(ref VHGE_Mod.settings.enableGasOverlay, ShowGasOverlay, "VHGE_GasOverlayTooltip".Translate());
             }
