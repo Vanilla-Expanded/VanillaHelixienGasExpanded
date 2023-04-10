@@ -35,6 +35,10 @@
       <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="PipeSystem">
+      <HintPath>..\..\..\VanillaExpandedFramework\1.4\Assemblies\PipeSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -57,6 +61,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Building_GasGeyser.cs" />
+    <Compile Include="GenStep_ScatterGasGeyser.cs" />
+    <Compile Include="Harmony\CompDeepExtractor_TryProducePortion.cs" />
     <Compile Include="Harmony\HarmonyInit.cs" />
     <Compile Include="Harmony\PlaySettings_DoPlaySettingsGlobalControls.cs" />
     <Compile Include="MapComponent\HelixienGasHandler.cs" />

@@ -31,8 +31,7 @@
       <ComponentIndustrial>4</ComponentIndustrial>
     </costList>
     <placeWorkers>
-      <li>PipeSystem.PlaceWorker_DeepExtractor</li>
-      <li>VHelixienGasE.PlaceWorker_AlwaysShowDeepResources</li>
+      <li>VHelixienGasE.Placeworker_Pump</li>
     </placeWorkers>
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
     <comps>
@@ -53,10 +52,6 @@
         <onlyExtractToNet>true</onlyExtractToNet>
         <showDeepCountLeft>false</showDeepCountLeft>
       </li>
-      <!-- <li Class="CompProperties_Power">
-        <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>300</basePowerConsumption>
-      </li> -->
     </comps>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <designationCategory>VCHE_PipeNetworks</designationCategory>

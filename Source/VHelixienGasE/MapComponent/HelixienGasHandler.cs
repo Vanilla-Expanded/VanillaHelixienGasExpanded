@@ -11,6 +11,7 @@ namespace VHelixienGasE
         public static Material material = SolidColorMaterials.NewSolidColorMaterial(new Color(0.22f, 0.57f, 0.2f, 0.65f), ShaderDatabase.MetaOverlay);
 
         public BoolGrid infiniteGasGrid = null;
+        public BoolGrid gasGeyserGrid = null;
         public int depositAmount = 0;
 
         public HelixienGasHandler(Map map) : base(map) { }
@@ -20,7 +21,10 @@ namespace VHelixienGasE
             if (infiniteGasGrid == null && map.ParentFaction == Faction.OfPlayer)
                 infiniteGasGrid = new BoolGrid(map);
 
-            if (VHGE_Mod.settings.enableDeepDeposits) 
+            if (gasGeyserGrid == null && map.ParentFaction == Faction.OfPlayer)
+                gasGeyserGrid = new BoolGrid(map);
+
+            if (VHGE_Mod.settings.enableDeepDeposits)
             {
                 for (int i = 0; i < VHGE_Mod.settings.deepDepositsAmount; i++)
                     CreateInfiniteDeposit();
@@ -30,6 +34,7 @@ namespace VHelixienGasE
         public override void ExposeData()
         {
             Scribe_Deep.Look(ref infiniteGasGrid, "infiniteGasGrid", null);
+            Scribe_Deep.Look(ref gasGeyserGrid, "gasGeyserGrid", null);
             Scribe_Values.Look(ref depositAmount, "depositAmount");
         }
 

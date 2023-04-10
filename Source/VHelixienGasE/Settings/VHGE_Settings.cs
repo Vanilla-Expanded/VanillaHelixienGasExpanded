@@ -50,7 +50,7 @@ namespace VHelixienGasE
             var main = inRect.ContractedBy(15f);
             var rect = new Rect(main.x, main.y, main.width, RowHeight);
 
-            SubTitle(ref rect, "VHGE_InfiniteDepositSettings".Translate());
+            SubTitle(ref rect, "VHGE_InfiniteDepositSettings".Translate(), false);
 
             Widgets.CheckboxLabeled(rect, "VHGE_EnableDeposits".Translate(), ref enableDeepDeposits);
             rect.y += RowHeight + 2f;
@@ -76,6 +76,18 @@ namespace VHelixienGasE
             rect.y += RowHeight + 2f;
             helixiendeepCountPerCell = (int)Widgets.HorizontalSlider_NewTemp(rect, helixiendeepCountPerCell, 1000, 5000, false, helixiendeepCountPerCell.ToString(), "1000", "5000", 10);
             rect.y += RowHeight + 2f;
+
+            SubTitle(ref rect, "VHGE_GeysersSettings".Translate());
+
+            Widgets.CheckboxLabeled(rect, "VHGE_EnableGeysers".Translate(), ref enableGasGeyser);
+            rect.y += RowHeight + 2f;
+
+            if (enableGasGeyser)
+            {
+                Widgets.Label(rect.LeftHalf(), "VHGE_GeysersCount".Translate());
+                IntAdjuster(ref gasGeyserAmount, rect.RightHalf(), 1, 1, 10);
+                rect.y += RowHeight + 2f;
+            }
         }
 
         public void WriteSettings()
@@ -121,8 +133,11 @@ namespace VHelixienGasE
             }
         }
 
-        public void SubTitle(ref Rect rect, string title)
+        public void SubTitle(ref Rect rect, string title, bool spaceUp = true)
         {
+            // Space up
+            if (spaceUp)
+                rect.y += RowHeight;
             // Save
             var anchor = Text.Anchor;
             // Subtitle
