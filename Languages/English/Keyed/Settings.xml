@@ -3,8 +3,10 @@
   <VHGE_Name>Vanilla Helixien Gas Expanded</VHGE_Name>
 
   <VHGE_InfiniteDepositSettings>&lt;b&gt;Infinite deposits settings&lt;/b&gt;</VHGE_InfiniteDepositSettings>
+  <VHGE_ScanningSettings>&lt;b&gt;Helixien settings&lt;/b&gt;</VHGE_ScanningSettings>
   <VHGE_EnableDeposits>Enable spawning infinite gas deposit(s):</VHGE_EnableDeposits>
   <VHGE_DepositsAmount>Deposits amount:</VHGE_DepositsAmount>
   <VHGE_DepositsCellCount>Deposits cells count:</VHGE_DepositsCellCount>
   <VHGE_HelixienDeepCommonality>Helixien deep commonality:</VHGE_HelixienDeepCommonality>
+  <VHGE_HelixienDeepCount>Helixien deep count per cell:</VHGE_HelixienDeepCount>
 </LanguageData>

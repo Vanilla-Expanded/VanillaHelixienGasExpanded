@@ -16,12 +16,13 @@ namespace VHelixienGasE
     {
         public bool enableDeepDeposits = true;
         public int deepDepositsAmount = 2;
-        public int deepDepositsCellCount = 15;
+        public int deepDepositsCellCount = 20;
 
         public bool enableGasGeyser = true;
         public int gasGeyserAmount = 3;
 
         public float helixiendeepCommonality = 1f;
+        public int helixiendeepCountPerCell = 2100;
 
         public bool enableGasOverlay = false;
 
@@ -29,16 +30,17 @@ namespace VHelixienGasE
 
         public override void ExposeData()
         {
-            Scribe_Values.Look(ref enableDeepDeposits, "enableDeepDeposits");
-            Scribe_Values.Look(ref deepDepositsAmount, "deepDepositsAmount");
-            Scribe_Values.Look(ref deepDepositsCellCount, "deepDepositsCellCount");
+            Scribe_Values.Look(ref enableDeepDeposits, "enableDeepDeposits", true);
+            Scribe_Values.Look(ref deepDepositsAmount, "deepDepositsAmount", 2);
+            Scribe_Values.Look(ref deepDepositsCellCount, "deepDepositsCellCount", 20);
 
-            Scribe_Values.Look(ref enableGasGeyser, "enableGasGeyser");
-            Scribe_Values.Look(ref gasGeyserAmount, "gasGeyserAmount");
+            Scribe_Values.Look(ref enableGasGeyser, "enableGasGeyser", true);
+            Scribe_Values.Look(ref gasGeyserAmount, "gasGeyserAmount", 3);
 
-            Scribe_Values.Look(ref helixiendeepCommonality, "helixiendeepCommonality");
+            Scribe_Values.Look(ref helixiendeepCommonality, "helixiendeepCommonality", 1f);
+            Scribe_Values.Look(ref helixiendeepCountPerCell, "helixiendeepCountPerCell", 2100);
 
-            Scribe_Values.Look(ref enableGasOverlay, "enableGasOverlay");
+            Scribe_Values.Look(ref enableGasOverlay, "enableGasOverlay", false);
         }
 
         public void DoSettingsWindowContents(Rect inRect)
@@ -64,15 +66,22 @@ namespace VHelixienGasE
                 rect.y += RowHeight + 2f;
             }
 
+            SubTitle(ref rect, "VHGE_ScanningSettings".Translate());
+
             Widgets.Label(rect, "VHGE_HelixienDeepCommonality".Translate());
             rect.y += RowHeight + 2f;
             helixiendeepCommonality = Widgets.HorizontalSlider_NewTemp(rect, helixiendeepCommonality, 0, 5, false, helixiendeepCommonality.ToString(), "0", "5", 0.1f);
+            rect.y += RowHeight + 2f;
+            Widgets.Label(rect, "VHGE_HelixienDeepCount".Translate());
+            rect.y += RowHeight + 2f;
+            helixiendeepCountPerCell = (int)Widgets.HorizontalSlider_NewTemp(rect, helixiendeepCountPerCell, 1000, 5000, false, helixiendeepCountPerCell.ToString(), "1000", "5000", 10);
             rect.y += RowHeight + 2f;
         }
 
         public void WriteSettings()
         {
             DefDatabase<ThingDef>.GetNamed("VHGE_Helixien").deepCommonality = helixiendeepCommonality;
+            DefDatabase<ThingDef>.GetNamed("VHGE_Helixien").deepCountPerCell = helixiendeepCountPerCell;
         }
 
         public void IntAdjuster(ref int val, Rect rect, int countChange, int min, int max)
