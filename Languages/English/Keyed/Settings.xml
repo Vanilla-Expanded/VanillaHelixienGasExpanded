@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <VHGE_Name>Vanilla Helixien Gas Expanded</VHGE_Name>
+
+  <VHGE_EnableDeposits>Enable spawning gas deposit:</VHGE_EnableDeposits>
+  <VHGE_DepositsAmount>Deposits amount:</VHGE_DepositsAmount>
+  <VHGE_DepositsCellCount>Deposits cells count:</VHGE_DepositsCellCount>
+</LanguageData>
