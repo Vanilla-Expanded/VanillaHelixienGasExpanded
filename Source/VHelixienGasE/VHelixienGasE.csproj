@@ -62,7 +62,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Building_GasGeyser.cs" />
-    <Compile Include="GenStep_ScatterGasGeyser.cs" />
     <Compile Include="Harmony\CompDeepExtractor_TryProducePortion.cs" />
     <Compile Include="Harmony\HarmonyInit.cs" />
     <Compile Include="Harmony\PlaySettings_DoPlaySettingsGlobalControls.cs" />

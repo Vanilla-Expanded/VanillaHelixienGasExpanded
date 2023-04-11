@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -11,31 +13,21 @@ namespace VHelixienGasE
         public static Material material = SolidColorMaterials.NewSolidColorMaterial(new Color(0.22f, 0.57f, 0.2f, 0.65f), ShaderDatabase.MetaOverlay);
 
         public BoolGrid infiniteGasGrid = null;
-        public BoolGrid gasGeyserGrid = null;
-        public int depositAmount = 0;
+
+        const int MinSpacing = 25;
+        const int MinEdgeDistance = 15;
 
         public HelixienGasHandler(Map map) : base(map) { }
 
         public override void FinalizeInit()
         {
-            if (infiniteGasGrid == null && map.ParentFaction == Faction.OfPlayer)
-                infiniteGasGrid = new BoolGrid(map);
-
-            if (gasGeyserGrid == null && map.ParentFaction == Faction.OfPlayer)
-                gasGeyserGrid = new BoolGrid(map);
-
-            if (VHGE_Mod.settings.enableDeepDeposits)
-            {
-                for (int i = 0; i < VHGE_Mod.settings.deepDepositsAmount; i++)
-                    CreateInfiniteDeposit();
-            }
+            InitDeposits();
+            InitGeysers();
         }
 
         public override void ExposeData()
         {
             Scribe_Deep.Look(ref infiniteGasGrid, "infiniteGasGrid", null);
-            Scribe_Deep.Look(ref gasGeyserGrid, "gasGeyserGrid", null);
-            Scribe_Values.Look(ref depositAmount, "depositAmount");
         }
 
         public override void MapComponentUpdate()
@@ -47,19 +39,32 @@ namespace VHelixienGasE
             }
         }
 
-        private void CreateInfiniteDeposit()
+        private void InitDeposits()
         {
-            // Make deposit
-            if (!CellFinderLoose.TryGetRandomCellWith(x => CanScatterAt(x, map), map, 50, out IntVec3 origin))
-                Log.Error("Could not find a center cell for infinite helixien gas deposit");
+            if (map.ParentFaction != Faction.OfPlayer)
+                return;
 
-            var def = ThingDefOf.VHGE_Helixien;
-            foreach (var cell in GridShapeMaker.IrregularLump(origin, map, VHGE_Mod.settings.deepDepositsCellCount))
+            // Init bool grid
+            infiniteGasGrid = new BoolGrid(map);
+            // Spawn deposit(s)
+            if (VHGE_Mod.settings.enableDeepDeposits)
             {
-                if (CanScatterAt(cell, map))
+                var def = ThingDefOf.VHGE_Helixien;
+
+                for (int i = 0; i < VHGE_Mod.settings.deepDepositsAmount; i++)
                 {
-                    map.deepResourceGrid.SetAt(cell, def, def.deepCountPerCell);
-                    infiniteGasGrid[cell] = true;
+                    // Find starting cell
+                    if (!CellFinderLoose.TryGetRandomCellWith(x => CanScatterAt(x, map), map, 50, out IntVec3 origin))
+                    {
+                        Log.Error("Couldn't find a starting cell to spawn infinite helixien gas deposit");
+                        return;
+                    }
+                    // Make deposit
+                    foreach (var cell in Helper.IrregularLumpWith(x => CanScatterAt(x, map), origin, map, VHGE_Mod.settings.deepDepositsCellCount))
+                    {
+                        map.deepResourceGrid.SetAt(cell, def, def.deepCountPerCell);
+                        infiniteGasGrid[cell] = true;
+                    }
                 }
             }
         }
@@ -76,6 +81,57 @@ namespace VHelixienGasE
                    && !map.deepResourceGrid.GetCellBool(index)
                    && !pos.Impassable(map)
                    && pos.DistanceToEdge(map) > 15;
+        }
+
+        private void InitGeysers()
+        {
+            if (map.TileInfo.WaterCovered || !VHGE_Mod.settings.enableGasGeyser)
+                return;
+
+            var steamGeysers = map.listerThings.ThingsMatching(ThingRequest.ForDef(RimWorld.ThingDefOf.SteamGeyser));
+            var geysersSpots = new List<IntVec3>();
+            for (int i = 0; i < steamGeysers.Count; i++)
+            {
+                geysersSpots.Add(steamGeysers[i].Position);
+            }
+
+            var usedSpots = new List<IntVec3>();
+            for (int i = 0; i < VHGE_Mod.settings.gasGeyserAmount; i++)
+            {
+                if (CellFinderLoose.TryFindRandomNotEdgeCellWith(MinEdgeDistance, x => CanSpawnAt(x, map, usedSpots, geysersSpots), map, out IntVec3 result))
+                {
+                    usedSpots.Add(result);
+                    GenSpawn.Spawn(ThingDefOf.VHGE_GasGeyser, result, map);
+                }
+            }
+        }
+
+        private bool CanSpawnAt(IntVec3 x, Map map, List<IntVec3> usedSpots, List<IntVec3> geysersSpots)
+        {
+            var occupiedCells = GenAdj.OccupiedRect(x, Rot4.North, new IntVec2(2, 2)).ToList();
+            for (int i = 0; i < occupiedCells.Count; i++)
+            {
+                var cell = occupiedCells[i];
+                if (!cell.GetTerrain(map).affordances.Contains(TerrainAffordanceDefOf.Heavy)
+                    || !cell.Standable(map)
+                    || NearUsedSpot(cell, usedSpots, MinSpacing * MinSpacing)
+                    || NearUsedSpot(cell, geysersSpots, 4 * 4))
+                    return false;
+            }
+
+            return true;
+        }
+
+        private bool NearUsedSpot(IntVec3 c, List<IntVec3> usedSpots, int spacingSquared)
+        {
+            for (int i = 0; i < usedSpots.Count; i++)
+            {
+                if ((float)(usedSpots[i] - c).LengthHorizontalSquared <= spacingSquared)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

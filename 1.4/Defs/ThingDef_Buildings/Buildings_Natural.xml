@@ -31,13 +31,4 @@
       <alwaysShowRelatedBuildCommands>true</alwaysShowRelatedBuildCommands>
     </building>
   </ThingDef>
-
-  <GenStepDef>
-    <defName>VHGE_GasGeysers</defName>
-    <order>500</order>
-    <genStep Class="VHelixienGasE.GenStep_SpawnGasGeyser">
-      <minSpacing>25</minSpacing>
-      <minEdgeDistance>15</minEdgeDistance>
-    </genStep>
-  </GenStepDef>
 </Defs>
