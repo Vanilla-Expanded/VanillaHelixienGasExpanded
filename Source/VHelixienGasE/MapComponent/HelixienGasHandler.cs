@@ -33,7 +33,7 @@ namespace VHelixienGasE
 
         public override void MapComponentUpdate()
         {
-            if (VHGE_Mod.settings.enableGasOverlay)
+            if (VHGE_Mod.settings.enableGasOverlay && Find.CurrentMap == map)
             {
                 foreach (var cell in infiniteGasGrid.ActiveCells)
                     CellRenderer.RenderCell(cell, material);
