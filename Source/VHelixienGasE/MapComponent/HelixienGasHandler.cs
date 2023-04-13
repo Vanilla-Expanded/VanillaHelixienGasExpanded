@@ -19,8 +19,9 @@ namespace VHelixienGasE
 
         public HelixienGasHandler(Map map) : base(map) { }
 
-        public override void FinalizeInit()
+        public override void MapGenerated()
         {
+            base.MapGenerated();
             InitDeposits();
             InitGeysers();
         }
