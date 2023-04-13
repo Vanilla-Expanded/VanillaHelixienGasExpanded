@@ -39,7 +39,7 @@ namespace VHelixienGasE
             }
         }
 
-        private void InitDeposits()
+        public void InitDeposits()
         {
             if (map.ParentFaction != Faction.OfPlayer)
                 return;
@@ -83,7 +83,7 @@ namespace VHelixienGasE
                    && !pos.Impassable(map);
         }
 
-        private void InitGeysers()
+        public void InitGeysers()
         {
             if (map.TileInfo.WaterCovered || !VHGE_Mod.settings.enableGasGeyser)
                 return;

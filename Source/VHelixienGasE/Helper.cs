@@ -66,7 +66,7 @@ namespace VHelixienGasE
             return lumpCells;
         }
 
-        [DebugAction("Pipe System", "Re-roll infinite gas deposits", false, false, actionType = DebugActionType.Action, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        [DebugAction("General", "Re-roll infinite gas deposits", false, false, actionType = DebugActionType.Action, allowedGameStates = AllowedGameStates.PlayingOnMap)]
         public static void ReRollDeposit()
         {
             var map = Find.CurrentMap;
@@ -78,14 +78,15 @@ namespace VHelixienGasE
                 return;
 
             // Remove deposits
-            var cells = comp.infiniteGasGrid.ActiveCells.ToList();
-            comp.infiniteGasGrid = null;
-            foreach (var cell in cells)
+            foreach (var cell in comp.infiniteGasGrid.ActiveCells)
             {
-                map.deepResourceGrid.SetAt(cell, null, 0);
+                var index = map.cellIndices.CellToIndex(cell);
+                map.deepResourceGrid.defGrid[index] = 0;
+                map.deepResourceGrid.countGrid[index] = 0;
             }
+            map.deepResourceGrid.drawer.SetDirty();
             // Recreate
-            comp.FinalizeInit();
+            comp.InitDeposits();
         }
     }
 }
