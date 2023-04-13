@@ -65,5 +65,27 @@ namespace VHelixienGasE
 
             return lumpCells;
         }
+
+        [DebugAction("Pipe System", "Re-roll infinite gas deposits", false, false, actionType = DebugActionType.Action, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        public static void ReRollDeposit()
+        {
+            var map = Find.CurrentMap;
+            if (map == null)
+                return;
+
+            var comp = map.GetComponent<HelixienGasHandler>();
+            if (comp == null)
+                return;
+
+            // Remove deposits
+            var cells = comp.infiniteGasGrid.ActiveCells.ToList();
+            comp.infiniteGasGrid = null;
+            foreach (var cell in cells)
+            {
+                map.deepResourceGrid.SetAt(cell, null, 0);
+            }
+            // Recreate
+            comp.FinalizeInit();
+        }
     }
 }

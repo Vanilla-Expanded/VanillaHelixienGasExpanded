@@ -8,7 +8,7 @@ namespace VHelixienGasE
     {
         public static bool Prefix(DeepResourceGrid __instance, IntVec3 c, ThingDef def, int count, Map ___map)
         {
-            if (___map.GetComponent<HelixienGasHandler>() is HelixienGasHandler comp && comp.infiniteGasGrid[c])
+            if (___map.GetComponent<HelixienGasHandler>() is HelixienGasHandler comp && comp.infiniteGasGrid != null && comp.infiniteGasGrid[c])
                 return false;
 
             return true;
