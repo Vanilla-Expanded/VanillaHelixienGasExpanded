@@ -10,7 +10,7 @@ namespace VHelixienGasE
         public static bool Prefix(Map ___map)
         {
             var c = UI.MouseCell();
-            if (Helper.GetHandlerFor(___map) is HelixienGasHandler comp && comp.infiniteGasGrid[c])
+            if (c.InBounds(___map) && Helper.GetHandlerFor(___map) is HelixienGasHandler comp && comp.infiniteGasGrid != null && comp.infiniteGasGrid[c])
             {
                 if (!c.InBounds(___map))
                     return false;
