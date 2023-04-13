@@ -75,12 +75,12 @@ namespace VHelixienGasE
             var terrainDef = map.terrainGrid.TerrainAt(index);
 
             return pos.InBounds(map)
-                   && !pos.InNoBuildEdgeArea(map)
+                   && pos.DistanceToEdge(map) > 15
+                   && pos.GetFirstThing(map, RimWorld.ThingDefOf.SteamGeyser) == null
                    && (terrainDef == null || !terrainDef.IsWater || terrainDef.passability != Traversability.Impassable)
                    && terrainDef.affordances.Contains(TerrainAffordanceDefOf.Medium)
                    && !map.deepResourceGrid.GetCellBool(index)
-                   && !pos.Impassable(map)
-                   && pos.DistanceToEdge(map) > 15;
+                   && !pos.Impassable(map);
         }
 
         private void InitGeysers()
