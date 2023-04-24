@@ -3,7 +3,7 @@
   <ThingDef ParentName="BuildingNaturalBase">
     <defName>VHGE_GasGeyser</defName>
     <label>gas geyser</label>
-    <description>A natural source of high-pressure steam. Geothermal generators can harness the steam power. Rooms built over this will rapidly cook.</description>
+    <description>A natural source of high-pressure gas. Helixien pumps can be built on top to extract the gas.</description>
     <thingClass>VHelixienGasE.Building_GasGeyser</thingClass>
     <graphicData>
       <texPath>Things/Building/Natural/GasGeyser</texPath>

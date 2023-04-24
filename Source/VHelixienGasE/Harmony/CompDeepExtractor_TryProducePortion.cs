@@ -24,18 +24,18 @@ namespace VHelixienGasE
             if (geyser != null && geyser.Position == loc && __instance.PipeNet is PipeNet net && net.storages.Count >= 1)
             {
                 var available = (int)net.AvailableCapacity;
-                __instance.noCapacity = available <= 1;
+                __instance.noCapacity = available == 0;
 
-                if (__instance.noCapacity == false)
+                if (__instance.noCapacity)
+                {
+                    __instance.EndSustainer();
+                }
+                else
                 {
                     net.DistributeAmongStorage(30 > available ? available : 30);
                     __instance.StartSustainer();
 
                     if (!__instance.cycleOver) __instance.cycleOver = true;
-                }
-                else
-                {
-                    __instance.EndSustainer();
                 }
 
                 return false;
@@ -55,6 +55,7 @@ namespace VHelixienGasE
             if (geyser != null && geyser.Position == loc && geyser is Building_GasGeyser gasGeyser)
             {
                 gasGeyser.harvester = (Building)__instance.parent;
+                __instance.lumpCells = gasGeyser.OccupiedRect().Cells.ToList();
             }
         }
     }
