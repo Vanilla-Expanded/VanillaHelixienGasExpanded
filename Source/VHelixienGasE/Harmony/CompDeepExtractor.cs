@@ -13,8 +13,10 @@ namespace VHelixienGasE
             var loc = __instance.parent.Position;
             var geyser = __instance.parent.Map.thingGrid.ThingAt(loc, ThingDefOf.VHGE_GasGeyser);
 
-            if (geyser != null && geyser.Position == loc && __instance.PipeNet is PipeNet net && net.storages.Count >= 1)
+            if (geyser != null && geyser.Position == loc && __instance.PipeNet is PipeNet net)
             {
+                if (net.storages.Count == 0) return false;
+
                 var available = (int)net.AvailableCapacity;
                 __instance.noCapacity = available == 0;
 
