@@ -1,6 +1,6 @@
-﻿using PipeSystem;
+﻿using System.Collections.Generic;
+using PipeSystem;
 using RimWorld;
-using System.Collections.Generic;
 using UnityEngine;
 using Verse;
 

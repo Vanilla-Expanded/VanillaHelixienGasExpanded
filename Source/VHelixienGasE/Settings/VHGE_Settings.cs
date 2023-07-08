@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime;
-using System.Text;
-using System.Threading.Tasks;
-using RimWorld;
+﻿using RimWorld;
 using UnityEngine;
 using Verse;
-using Verse.Noise;
 using Verse.Sound;
 
 namespace VHelixienGasE
@@ -26,7 +19,7 @@ namespace VHelixienGasE
 
         public bool enableGasOverlay = false;
 
-        const int RowHeight = 24;
+        private const int RowHeight = 24;
 
         public override void ExposeData()
         {

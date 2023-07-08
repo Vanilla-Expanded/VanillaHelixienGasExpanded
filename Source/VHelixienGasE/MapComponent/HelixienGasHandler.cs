@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
 using UnityEngine;
@@ -14,10 +13,12 @@ namespace VHelixienGasE
 
         public BoolGrid infiniteGasGrid = null;
 
-        const int MinSpacing = 25;
-        const int MinEdgeDistance = 15;
+        private const int MinSpacing = 25;
+        private const int MinEdgeDistance = 15;
 
-        public HelixienGasHandler(Map map) : base(map) { }
+        public HelixienGasHandler(Map map) : base(map)
+        {
+        }
 
         public override void MapGenerated()
         {

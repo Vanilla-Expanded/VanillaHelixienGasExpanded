@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using HarmonyLib;
 using PipeSystem;
-using UnityEngine;
 using Verse;
-using Verse.Noise;
-using static HarmonyLib.Code;
-using static RimWorld.FleshTypeDef;
 
 namespace VHelixienGasE
 {
@@ -32,7 +24,7 @@ namespace VHelixienGasE
                 }
                 else
                 {
-                    net.DistributeAmongStorage(30 > available ? available : 30);
+                    net.DistributeAmongStorage(30 > available ? available : 30, out _);
                     __instance.StartSustainer();
 
                     if (!__instance.cycleOver) __instance.cycleOver = true;
