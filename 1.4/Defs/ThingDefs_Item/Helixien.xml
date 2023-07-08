@@ -22,6 +22,9 @@
     <deepCountPerPortion>30</deepCountPerPortion>
     <deepLumpSizeRange>40~80</deepLumpSizeRange>
     <deepCountPerCell>2100</deepCountPerCell>
+    <comps>
+      <li Class="VHelixienGasE.CompProperties_CompDestroyOnSpawn" />
+    </comps>
     <modExtensions>
       <li Class="VFECore.ThingDefExtension">
         <deepColor>(0.24, 0.4, 0.2)</deepColor>
