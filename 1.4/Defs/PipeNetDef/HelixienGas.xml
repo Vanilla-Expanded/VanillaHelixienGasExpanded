@@ -25,5 +25,6 @@
         <ratio>1</ratio>
       </li>
     </linkToRefuelables>
+    <noStorageAlert>true</noStorageAlert>
   </PipeSystem.PipeNetDef>
 </Defs>
