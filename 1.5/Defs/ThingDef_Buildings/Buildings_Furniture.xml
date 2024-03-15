@@ -84,35 +84,34 @@
     <designationCategory>VCHE_PipeNetworks</designationCategory>
   </ThingDef>
 
+
   <ThingDef ParentName="LampBase">
     <defName>VHGE_GasWallLamp</defName>
     <label>gas wall lamp</label>
     <graphicData>
       <texPath>Things/Building/GasMachines/GasWallLight</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-      <drawOffsetNorth>(0,0,0.9)</drawOffsetNorth>
-      <drawOffsetSouth>(0,0,-0.9)</drawOffsetSouth>
-      <drawOffsetWest>(-0.9,0,0)</drawOffsetWest>
-      <drawOffsetEast>(0.9,0,0)</drawOffsetEast>
       <shadowData>
         <volume>(0, 0, 0)</volume>
         <offset>(0,0,0)</offset>
       </shadowData>
-      <damageData>
-        <enabled>false</enabled>
-      </damageData>
     </graphicData>
+    <altitudeLayer>Item</altitudeLayer>
 	<statBases>
 		<Mass>2</Mass>
 	</statBases>
-    <altitudeLayer>BuildingOnTop</altitudeLayer>
     <description>A gas-powered wall light that lights an area. People need light to move and work at full speed. Needs to be connected to the helixien gas network. Can be safely placed outdoors.</description>
     <comps Inherit='False'>
-      <li Class="CompProperties_Glower">
-        <glowRadius>9</glowRadius>
-        <glowColor>(90,140,90,0)</glowColor>
-        <colorPickerEnabled>true</colorPickerEnabled>
-        <darklightToggle>true</darklightToggle>
+      <li Class="VanillaFurnitureExpanded.CompProperties_GlowerExtended">
+        <spawnGlowerInFacedCell>true</spawnGlowerInFacedCell>
+        <colorOptions>
+          <li>
+            <glowRadius>9</glowRadius>
+            <glowColor>(90,140,90,0)</glowColor>
+            <colorPickerEnabled>true</colorPickerEnabled>
+            <darklightToggle>true</darklightToggle>
+          </li>
+        </colorOptions>
       </li>
       <li Class="VanillaFurnitureExpanded.CompProperties_MountableOnWall"/>
       <li Class="PipeSystem.CompProperties_ResourceTrader">
@@ -125,18 +124,11 @@
         <commandDescKey>VHGE_CommandToggleGas_Desc</commandDescKey>
       </li>
     </comps>
-    <placeWorkers>
-      <li>Placeworker_AttachedToWall</li>
-    </placeWorkers>
     <building>
       <isEdifice>false</isEdifice>
-      <isAttachment>true</isAttachment>
+      <canPlaceOverWall>true</canPlaceOverWall>
     </building>
     <rotatable>true</rotatable>
-    <pathCost>0</pathCost>
-    <passability>Standable</passability>
-    <overrideMinifiedRot>North</overrideMinifiedRot>
-    <minifiedDrawOffset>(0, 0, 0.2)</minifiedDrawOffset>
     <clearBuildingArea>false</clearBuildingArea>
     <defaultPlacingRot>South</defaultPlacingRot>
     <researchPrerequisites Inherit='False'>
