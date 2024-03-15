@@ -9,6 +9,7 @@
   With this mod you will be able to drill for Helixien gas and install a pump that gives you access to cheap, combustible and nearly infinite fuel supply. You can construct numerous appliances that rely on gas and are solar flare immune. From gas stoves and smithys to lamps and heaters, you can now bring the gas power to your colony.</description>
   <supportedVersions>
     <li>1.4</li>
+    <li>1.5</li>
   </supportedVersions>
   <packageId>VanillaExpanded.HelixienGas</packageId>
   <modDependencies>
