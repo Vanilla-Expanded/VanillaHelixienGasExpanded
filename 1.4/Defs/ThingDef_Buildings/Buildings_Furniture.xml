@@ -117,6 +117,9 @@
         <commandDescKey>VHGE_CommandToggleGas_Desc</commandDescKey>
       </li>
     </comps>
+    <placeWorkers>
+	  <li>VanillaFurnitureExpanded.PlaceWorker_OnWall</li>
+    </placeWorkers>
     <building>
       <isEdifice>false</isEdifice>
       <canPlaceOverWall>true</canPlaceOverWall>

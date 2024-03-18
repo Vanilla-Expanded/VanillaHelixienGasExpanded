@@ -128,6 +128,9 @@
       <isEdifice>false</isEdifice>
       <canPlaceOverWall>true</canPlaceOverWall>
     </building>
+    <placeWorkers>
+	  <li>VanillaFurnitureExpanded.PlaceWorker_OnWall</li>
+    </placeWorkers>
     <rotatable>true</rotatable>
     <clearBuildingArea>false</clearBuildingArea>
     <defaultPlacingRot>South</defaultPlacingRot>
