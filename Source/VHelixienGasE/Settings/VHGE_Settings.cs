@@ -63,11 +63,11 @@ namespace VHelixienGasE
 
             Widgets.Label(rect, "VHGE_HelixienDeepCommonality".Translate());
             rect.y += RowHeight + 2f;
-            helixiendeepCommonality = Widgets.HorizontalSlider_NewTemp(rect, helixiendeepCommonality, 0, 5, false, helixiendeepCommonality.ToString(), "0", "5", 0.1f);
+            helixiendeepCommonality = Widgets.HorizontalSlider(rect, helixiendeepCommonality, 0, 5, false, helixiendeepCommonality.ToString(), "0", "5", 0.1f);
             rect.y += RowHeight + 2f;
             Widgets.Label(rect, "VHGE_HelixienDeepCount".Translate());
             rect.y += RowHeight + 2f;
-            helixiendeepCountPerCell = (int)Widgets.HorizontalSlider_NewTemp(rect, helixiendeepCountPerCell, 1000, 5000, false, helixiendeepCountPerCell.ToString(), "1000", "5000", 10);
+            helixiendeepCountPerCell = (int)Widgets.HorizontalSlider(rect, helixiendeepCountPerCell, 1000, 5000, false, helixiendeepCountPerCell.ToString(), "1000", "5000", 10);
             rect.y += RowHeight + 2f;
 
             SubTitle(ref rect, "VHGE_GeysersSettings".Translate());
