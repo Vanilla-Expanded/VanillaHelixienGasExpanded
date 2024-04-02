@@ -12,6 +12,7 @@
     <li>1.5</li>
   </supportedVersions>
   <packageId>VanillaExpanded.HelixienGas</packageId>
+  <modIconPath IgnoreIfNoMatchingField="True">UI/VELogo</modIconPath>
   <modDependencies>
     <li>
       <packageId>brrainz.harmony</packageId>
