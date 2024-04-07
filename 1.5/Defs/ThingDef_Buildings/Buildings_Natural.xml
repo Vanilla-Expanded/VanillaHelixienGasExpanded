@@ -20,7 +20,7 @@
     <selectable>true</selectable>
     <size>(2,2)</size>
     <neverOverlapFloors>true</neverOverlapFloors>
-    <blocksPlants>true</blocksPlants>
+    <blockPlants>true</blockPlants>
     <building>
       <isEdifice>false</isEdifice>
       <claimable>false</claimable>
