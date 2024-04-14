@@ -89,7 +89,7 @@
       <expandHomeArea>false</expandHomeArea>
       <canBeDamagedByAttacks>false</canBeDamagedByAttacks>
     </graphicData>
-    <uiIconPath>Things/Building/Linked/GasPipe_MenuIcon</uiIconPath>
+    <uiIconPath>Things/Building/Linked/BuriedGasPipe_MenuIcon</uiIconPath>
     <uiIconScale>1</uiIconScale>
     <building>
       <ai_chillDestination>false</ai_chillDestination>
