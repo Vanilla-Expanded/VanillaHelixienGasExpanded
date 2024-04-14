@@ -84,10 +84,6 @@
       <damageData>
         <rect>(0,0.35,1,0.3)</rect>
       </damageData>
-      <ai_neverTrashThis>true</ai_neverTrashThis>
-      <isTargetable>false</isTargetable>
-      <expandHomeArea>false</expandHomeArea>
-      <canBeDamagedByAttacks>false</canBeDamagedByAttacks>
     </graphicData>
     <uiIconPath>Things/Building/Linked/BuriedGasPipe_MenuIcon</uiIconPath>
     <uiIconScale>1</uiIconScale>
@@ -98,6 +94,10 @@
       <blueprintGraphicData>
         <texPath>Things/Building/Linked/GasPipe_Blueprint_Atlas</texPath>
       </blueprintGraphicData>
+      <ai_neverTrashThis>true</ai_neverTrashThis>
+      <isTargetable>false</isTargetable>
+      <expandHomeArea>false</expandHomeArea>
+      <canBeDamagedByAttacks>false</canBeDamagedByAttacks>
     </building>
     <drawerType>MapMeshOnly</drawerType>
     <altitudeLayer>FloorEmplacement</altitudeLayer>
