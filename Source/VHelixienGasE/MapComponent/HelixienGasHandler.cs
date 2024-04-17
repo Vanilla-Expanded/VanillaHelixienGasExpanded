@@ -46,6 +46,8 @@ namespace VHelixienGasE
             if (map.ParentFaction != Faction.OfPlayer)
                 return;
 
+            if(map.IsPocketMap)
+                return;
             // Init bool grid
             infiniteGasGrid = new BoolGrid(map);
             // Spawn deposit(s)
@@ -88,6 +90,8 @@ namespace VHelixienGasE
         public void InitGeysers()
         {
             if (map.TileInfo.WaterCovered || !VHGE_Mod.settings.enableGasGeyser)
+                return;
+            if (map.IsPocketMap)
                 return;
 
             var steamGeysers = map.listerThings.ThingsMatching(ThingRequest.ForDef(RimWorld.ThingDefOf.SteamGeyser));
