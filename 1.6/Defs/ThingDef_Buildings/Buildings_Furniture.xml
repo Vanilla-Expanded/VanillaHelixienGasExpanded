@@ -113,6 +113,8 @@
     </costList>
     <statBases>
       <Mass>2</Mass>
+      <WorkToBuild>330</WorkToBuild>
+      <MaxHitPoints>35</MaxHitPoints>
     </statBases>
     <description>A gas-powered wall light that lights an area. People need light to move and work at full speed. Needs to be connected to the helixien gas network. Can be safely placed outdoors.</description>
     <passability>Standable</passability>
@@ -122,7 +124,7 @@
     <minifiedDrawOffset>(0, 0, 0.2)</minifiedDrawOffset>
     <comps Inherit='False'>
       <li Class="CompProperties_Glower">
-        <glowRadius>9</glowRadius>
+        <glowRadius>11</glowRadius>
         <glowColor>(90,140,90,0)</glowColor>
         <colorPickerEnabled>true</colorPickerEnabled>
         <darklightToggle>true</darklightToggle>
@@ -166,6 +168,9 @@
     </costList>
     <statBases>
       <Mass>10</Mass>
+      <WorkToBuild>600</WorkToBuild>
+      <MaxHitPoints>130</MaxHitPoints>
+      <Flammability>0.0</Flammability>
     </statBases>
     <comps Inherit='False'>
       <li Class="CompProperties_Glower">
@@ -176,7 +181,7 @@
       </li>
       <li Class="PipeSystem.CompProperties_ResourceTrader">
         <pipeNet>VHGE_HelixienNet</pipeNet>
-        <consumptionPerTick>0.4</consumptionPerTick>
+        <consumptionPerTick>0.13333333333333333333333333333333</consumptionPerTick>
       </li>
       <li Class="CompProperties_Flickable">
         <commandTexture>Things/Special/Fluid/VHGE_OverlayBase</commandTexture>
