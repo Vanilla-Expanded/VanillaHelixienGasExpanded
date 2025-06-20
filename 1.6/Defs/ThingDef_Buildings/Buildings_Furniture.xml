@@ -61,10 +61,10 @@
     <statBases>
       <Mass>4</Mass>
     </statBases>
-	 <costList>
+    <costList>
       <Steel>20</Steel>
     </costList>
-	<comps Inherit='False'>
+    <comps Inherit='False'>
       <li Class="CompProperties_Glower">
         <glowRadius>12</glowRadius>
         <glowColor>(90,140,90,0)</glowColor>
@@ -92,34 +92,41 @@
     <defName>VHGE_GasWallLamp</defName>
     <label>gas wall lamp</label>
     <graphicData>
-      <texPath>Things/Building/GasMachines/GasWallLight</texPath>
+      <texPath>Things/Building/GasMachines/GasWallLightM</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
+      <drawOffsetNorth>(0,0,0.9)</drawOffsetNorth>
+      <drawOffsetSouth>(0,0,-0.9)</drawOffsetSouth>
+      <drawOffsetWest>(-0.9,0,0)</drawOffsetWest>
+      <drawOffsetEast>(0.9,0,0)</drawOffsetEast>
       <shadowData>
         <volume>(0, 0, 0)</volume>
         <offset>(0,0,0)</offset>
       </shadowData>
+      <damageData>
+        <enabled>false</enabled>
+      </damageData>
     </graphicData>
-    <altitudeLayer>Item</altitudeLayer>
-	 <costList>
+    <uiIconPath>Things/Building/GasMachines/GasWallLightM_north</uiIconPath>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <costList>
       <Steel>20</Steel>
     </costList>
-	<statBases>
-		<Mass>2</Mass>
-	</statBases>
+    <statBases>
+      <Mass>2</Mass>
+    </statBases>
     <description>A gas-powered wall light that lights an area. People need light to move and work at full speed. Needs to be connected to the helixien gas network. Can be safely placed outdoors.</description>
+    <passability>Standable</passability>
+    <terrainAffordanceNeeded IsNull="True"/>
+    <pathCost>0</pathCost>
+    <overrideMinifiedRot>North</overrideMinifiedRot>
+    <minifiedDrawOffset>(0, 0, 0.2)</minifiedDrawOffset>
     <comps Inherit='False'>
-      <li Class="VEF.Buildings.CompProperties_GlowerExtended">
-        <spawnGlowerInFacedCell>true</spawnGlowerInFacedCell>
-        <colorOptions>
-          <li>
-            <glowRadius>9</glowRadius>
-            <glowColor>(90,140,90,0)</glowColor>
-            <colorPickerEnabled>true</colorPickerEnabled>
-            <darklightToggle>true</darklightToggle>
-          </li>
-        </colorOptions>
+      <li Class="CompProperties_Glower">
+        <glowRadius>9</glowRadius>
+        <glowColor>(90,140,90,0)</glowColor>
+        <colorPickerEnabled>true</colorPickerEnabled>
+        <darklightToggle>true</darklightToggle>
       </li>
-      <li Class="VEF.Buildings.CompProperties_MountableOnWall"/>
       <li Class="PipeSystem.CompProperties_ResourceTrader">
         <pipeNet>VHGE_HelixienNet</pipeNet>
         <consumptionPerTick>0.04</consumptionPerTick>
@@ -132,11 +139,10 @@
     </comps>
     <building>
       <isEdifice>false</isEdifice>
-      <canPlaceOverWall>true</canPlaceOverWall>
-	 
+      <isAttachment>true</isAttachment>
     </building>
     <placeWorkers>
-	  <li>VEF.Buildings.PlaceWorker_OnWall</li>
+      <li>Placeworker_AttachedToWall</li>
     </placeWorkers>
     <rotatable>true</rotatable>
     <clearBuildingArea>false</clearBuildingArea>
@@ -158,9 +164,9 @@
     <costList>
       <Steel>80</Steel>
     </costList>
-	<statBases>
-		<Mass>10</Mass>
-	</statBases>
+    <statBases>
+      <Mass>10</Mass>
+    </statBases>
     <comps Inherit='False'>
       <li Class="CompProperties_Glower">
         <glowRadius>24</glowRadius>

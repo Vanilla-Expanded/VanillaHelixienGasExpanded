@@ -25,6 +25,9 @@
         <ratio>1</ratio>
       </li>
     </linkToRefuelables>
+    <noLinkedGraphicDefs>
+      <li>VHGE_GasWallLamp</li>
+    </noLinkedGraphicDefs>
     <noStorageAlert>true</noStorageAlert>
   </PipeSystem.PipeNetDef>
 </Defs>
