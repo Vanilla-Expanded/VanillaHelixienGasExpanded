@@ -48,6 +48,9 @@ namespace VHelixienGasE
 
             if(map.IsPocketMap)
                 return;
+
+            if (map.Tile.LayerDef != PlanetLayerDefOf.Surface)
+                return;
             // Init bool grid
             infiniteGasGrid = new BoolGrid(map);
             // Spawn deposit(s)
@@ -93,6 +96,9 @@ namespace VHelixienGasE
                 return;
             if (map.IsPocketMap)
                 return;
+            if (map.Tile.LayerDef != PlanetLayerDefOf.Surface)
+                return;
+                
 
             var steamGeysers = map.listerThings.ThingsMatching(ThingRequest.ForDef(RimWorld.ThingDefOf.SteamGeyser));
             var geysersSpots = new List<IntVec3>();
