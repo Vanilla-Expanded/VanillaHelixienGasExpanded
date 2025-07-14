@@ -22,6 +22,7 @@
       <WorkToBuild>2500</WorkToBuild>
       <Flammability>1.0</Flammability>
       <Beauty>-20</Beauty>
+      <Mass>40</Mass>
     </statBases>
     <tickerType>Normal</tickerType>
     <canOverlapZones>false</canOverlapZones>
@@ -67,5 +68,9 @@
         <deepResourcesOnGUIRequireScanner>false</deepResourcesOnGUIRequireScanner>
       </li>
     </modExtensions>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsPower</li>
+    </thingCategories>
   </ThingDef>
 </Defs>
