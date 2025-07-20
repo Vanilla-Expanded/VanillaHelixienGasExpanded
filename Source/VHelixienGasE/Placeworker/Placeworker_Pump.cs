@@ -63,5 +63,15 @@ namespace VHelixienGasE
                 GenDraw.DrawFieldEdges(e.lumpCells, Color.white);
             }
         }
+
+        // Probably not needed, may include it just in case.
+        public override bool ForceAllowPlaceOver(BuildableDef other) => other == ThingDefOf.VHGE_GasGeyser;
+
+        public override void DrawMouseAttachments(BuildableDef def)
+        {
+            var list = Find.CurrentMap.listerThings.ThingsOfDef(ThingDefOf.VHGE_GasGeyser);
+            for (var i = 0; i < list.Count; i++)
+                TargetHighlighter.Highlight(list[i]);
+        }
     }
 }
