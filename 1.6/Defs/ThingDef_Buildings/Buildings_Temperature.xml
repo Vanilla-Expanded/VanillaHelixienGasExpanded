@@ -127,6 +127,7 @@
       </li>
       <li Class="CompProperties_TempControl">
         <energyPerSecond>21</energyPerSecond>
+		
       </li>
       <li Class="CompProperties_Breakdownable" />
     </comps>
