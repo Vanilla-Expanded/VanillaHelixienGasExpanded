@@ -70,7 +70,8 @@
     </comps>
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-    <designationCategory>VCHE_PipeNetworks</designationCategory>
+    <designationCategory>Power</designationCategory>
+	<uiOrder>2100.1</uiOrder>
     <designationHotKey>Misc4</designationHotKey>
     <constructEffect>ConstructMetal</constructEffect>
     <researchPrerequisites>
@@ -149,13 +150,14 @@
       </li>
     </comps>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-    <designationCategory>VCHE_PipeNetworks</designationCategory>
+    <designationCategory>Power</designationCategory>
     <designationHotKey>Misc4</designationHotKey>
     <constructEffect>ConstructMetal</constructEffect>
     <researchPrerequisites>
       <li>VFE_IndustrialGenerators</li>
       <li>VHGE_GasExtraction</li>
     </researchPrerequisites>
+	<uiOrder>2100.11</uiOrder>
     <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
   </ThingDef>

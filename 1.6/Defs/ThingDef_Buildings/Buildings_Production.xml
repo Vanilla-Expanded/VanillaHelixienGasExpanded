@@ -34,7 +34,7 @@
 			<Beauty>-10</Beauty>
 		</statBases>
 		<size>(3,2)</size>
-		<designationCategory>VCHE_PipeNetworks</designationCategory>
+		<designationCategory>Production</designationCategory>
 		<fillPercent>1</fillPercent>
 		<passability>Impassable</passability>
 		<hasInteractionCell>True</hasInteractionCell>
@@ -116,7 +116,7 @@
 			<Flammability>1.0</Flammability>
 		</statBases>
 		<size>(3,1)</size>
-		<designationCategory>VCHE_PipeNetworks</designationCategory>
+		<designationCategory>Production</designationCategory>
 		<passability>PassThroughOnly</passability>
 		<pathCost>70</pathCost>
 		<hasInteractionCell>True</hasInteractionCell>
@@ -169,6 +169,7 @@
 				</inheritRecipesFrom>
 			</li>
 		</modExtensions>
+		 <uiOrder>2310.1</uiOrder>
 	</ThingDef>
 	<ThingDef ParentName="BenchBase">
 		<defName>VHGE_GasPoweredStove</defName>
@@ -202,7 +203,7 @@
 			<Flammability>1.0</Flammability>
 		</statBases>
 		<size>(3,1)</size>
-		<designationCategory>VCHE_PipeNetworks</designationCategory>
+		<designationCategory>Production</designationCategory>
 		<passability>PassThroughOnly</passability>
 		<pathCost>70</pathCost>
 		<hasInteractionCell>True</hasInteractionCell>
@@ -246,6 +247,7 @@
 				</inheritRecipesFrom>
 			</li>
 		</modExtensions>
+		<uiOrder>2120.1</uiOrder>
 	</ThingDef>
 	<ThingDef ParentName="BenchBase">
 		<defName>VHGE_GasPoweredSmithy</defName>
@@ -282,7 +284,7 @@
 			<Cleanliness>-3</Cleanliness>
 		</statBases>
 		<size>(3,1)</size>
-		<designationCategory>VCHE_PipeNetworks</designationCategory>
+		<designationCategory>Production</designationCategory>
 		<passability>PassThroughOnly</passability>
 		<pathCost>50</pathCost>
 		<hasInteractionCell>True</hasInteractionCell>
@@ -328,6 +330,7 @@
 				</inheritRecipesFrom>
 			</li>
 		</modExtensions>
+		 <uiOrder>2510.1</uiOrder>
 	</ThingDef>
 	<ThingDef ParentName="BenchBase">
 		<defName>VHGE_GasPoweredRefinery</defName>
@@ -389,7 +392,7 @@
 		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
 		<hasInteractionCell>true</hasInteractionCell>
 		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-		<designationCategory>VCHE_PipeNetworks</designationCategory>
+		<designationCategory>Production</designationCategory>
 		<surfaceType>Item</surfaceType>
 		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
 		<placeWorkers>

@@ -48,7 +48,8 @@
     <researchPrerequisites>
       <li>VHGE_GasExtraction</li>
     </researchPrerequisites>
-    <designationCategory>VCHE_PipeNetworks</designationCategory>
+    <designationCategory>Furniture</designationCategory>
+	<uiOrder>2995.1</uiOrder>
   </ThingDef>
 
   <ThingDef ParentName="LampBase">
@@ -64,6 +65,7 @@
     <costList>
       <Steel>20</Steel>
     </costList>
+	<uiOrder>2990.1</uiOrder>
     <comps Inherit='False'>
       <li Class="CompProperties_Glower">
         <glowRadius>12</glowRadius>
@@ -84,7 +86,7 @@
     <researchPrerequisites Inherit='False'>
       <li>VHGE_GasExtraction</li>
     </researchPrerequisites>
-    <designationCategory>VCHE_PipeNetworks</designationCategory>
+    <designationCategory>Furniture</designationCategory>
   </ThingDef>
 
 
@@ -111,6 +113,7 @@
     <costList>
       <Steel>20</Steel>
     </costList>
+	<uiOrder>2991.1</uiOrder>
     <statBases>
       <Mass>2</Mass>
       <WorkToBuild>330</WorkToBuild>
@@ -152,7 +155,7 @@
     <researchPrerequisites Inherit='False'>
       <li>VHGE_GasExtraction</li>
     </researchPrerequisites>
-    <designationCategory>VCHE_PipeNetworks</designationCategory>
+    <designationCategory>Furniture</designationCategory>
   </ThingDef>
 
   <ThingDef ParentName="LampBase">
@@ -189,10 +192,11 @@
         <commandDescKey>VHGE_CommandToggleGas_Desc</commandDescKey>
       </li>
     </comps>
+	 <uiOrder>2992.1</uiOrder>
     <researchPrerequisites Inherit='False'>
       <li>VHGE_GasExtraction</li>
     </researchPrerequisites>
     <uiIconOffset>(0, 0.2)</uiIconOffset>
-    <designationCategory>VCHE_PipeNetworks</designationCategory>
+    <designationCategory>Furniture</designationCategory>
   </ThingDef>
 </Defs>

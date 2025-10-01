@@ -17,8 +17,8 @@
     <passability>Impassable</passability>
     <castEdgeShadows>true</castEdgeShadows>
     <fillPercent>1.0</fillPercent>
-    <designationCategory>VCHE_PipeNetworks</designationCategory>
-    <uiOrder>2200</uiOrder>
+    <designationCategory>Misc</designationCategory>
+    <uiOrder>2201</uiOrder>
     <canOverlapZones>false</canOverlapZones>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
     <building>
