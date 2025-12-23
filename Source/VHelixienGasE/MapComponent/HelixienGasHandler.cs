@@ -2,6 +2,7 @@
 using System.Linq;
 using RimWorld;
 using UnityEngine;
+using VEF.Maps;
 using Verse;
 
 namespace VHelixienGasE
@@ -58,7 +59,7 @@ namespace VHelixienGasE
             {
                 var def = ThingDefOf.VHGE_Helixien;
 
-                for (int i = 0; i < VHGE_Mod.settings.deepDepositsAmount; i++)
+                for (int i = 0; i < (VHGE_Mod.settings.deepDepositsAmount + AddDepositsByMutator(map)); i++)
                 {
                     // Find starting cell
                     if (!CellFinderLoose.TryGetRandomCellWith(x => CanScatterAt(x, map), map, 50, out IntVec3 origin))
@@ -74,6 +75,22 @@ namespace VHelixienGasE
                     }
                 }
             }
+        }
+
+        private int AddDepositsByMutator(Map map)
+        {
+            int offset = 0;
+            foreach (TileMutatorDef mutator in map.Tile.Tile.Mutators)
+            {
+                TileMutatorExtension extension = mutator.GetModExtension<TileMutatorExtension>();
+
+                if (extension != null && extension.extraDeepHelixienGasDeposits != 0)
+                {
+                    offset += extension.extraDeepHelixienGasDeposits;
+                }
+
+            }
+            return offset;
         }
 
         private bool CanScatterAt(IntVec3 pos, Map map)
