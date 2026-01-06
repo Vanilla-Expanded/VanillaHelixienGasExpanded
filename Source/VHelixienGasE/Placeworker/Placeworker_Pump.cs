@@ -58,7 +58,8 @@ namespace VHelixienGasE
         public override void DrawGhost(ThingDef def, IntVec3 center, Rot4 rot, Color ghostCol, Thing thing = null)
         {
             base.DrawGhost(def, center, rot, ghostCol, thing);
-            if (thing != null && thing.TryGetComp<PipeSystem.CompDeepExtractor>() is PipeSystem.CompDeepExtractor e && e.lumpCells.Count > 0)
+           
+            if (thing != null && thing.TryGetComp<PipeSystem.CompDeepExtractor>() is PipeSystem.CompDeepExtractor e && e?.lumpCells!=null&&e.lumpCells.Count > 0)
             {
                 GenDraw.DrawFieldEdges(e.lumpCells, Color.white);
             }
